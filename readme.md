@@ -3,3 +3,5 @@ dengan anggota kelompok
 1. Fathin Ahmad Zidan A
 2. Yosia Sitompul
 3. Muhammad Rifqi Fathurrahman
+
+kami akan membuat sebuah website kepegawaian untuk fakultas teknik yang memiliki fitur...
