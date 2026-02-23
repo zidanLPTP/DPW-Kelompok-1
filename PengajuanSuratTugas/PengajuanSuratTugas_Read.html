@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <title>Pembuatan Card, Tabel, dan Form</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         header {
+            background-color: #a30707;
+            padding: 40px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            border-bottom: #333 solid 4px;
+        }
         .card {
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -22,51 +36,85 @@
             margin-top: 20px;
         }
         table, th, td {
-            border: 1px solid black;
+            border: 2px solid black;
             padding: 8px;
+            text-align: left;
         }
         form {
             margin-top: 20px;
         }
+        nav {
+            background-color: #a63c3c;
+            padding: 10px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+            margin: 0;
+            background-color: #a63c3c;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            float: left;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+         nav ul li:hover a {
+            color: #a30707;
+            background-color: #f0f0f0;
+         }
+         section {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            width: 5%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <h1>Contoh Card, Tabel, dan Form</h1>
-
-    <!-- Card -->
-    <div class="card">
-        <img src="gambar.jpg" alt="Contoh Card">
-        <h2>Judul Card</h2>
-        <p>Ini adalah deskripsi singkat card.</p>
-    </div>
-
+    <header>
+        <h1>Website Kepegawaian Teknik</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="DPW-Kelompok-1/Dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
     <!-- Tabel -->
-    <h2>Contoh Tabel</h2>
+    <h2>Pengisian Data</h2>
     <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Usia</th>
+                <th>Jabatan</th>
+            </tr>
         <tr>
-            <th>Nama</th>
-            <th>Umur</th>
+            <td>Alice</td>
+            <td>30</td>
+            <td>Manager</td>
         </tr>
         <tr>
-            <td>Fathin</td>
-            <td>21</td>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Staff</td>
         </tr>
-        <tr>
-            <td>Ani</td>
-            <td>22</td>
-        </tr>
-    </table>
-
+        <button>Update</button>
     <!-- Form -->
-    <h2>Contoh Form</h2>
-    <form>
-        <label for="nama">Nama:</label><br>
-        <input type="text" id="nama" name="nama"><br><br>
-
-        <label for="pesan">Pesan:</label><br>
-        <textarea id="pesan" name="pesan"></textarea><br><br>
-
-        <button type="submit">Kirim</button>
-    </form>
 </body>
 </html>
