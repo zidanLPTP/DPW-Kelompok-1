@@ -1,36 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pembuatan Card, Tabel, dan Form</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            padding: 16px;
+            margin: 10px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pengajuan Surat Tugas</h1>
-    <button type="button" onclick="location.href='pengajuansurat_create.html'">+ Surat Tugas</button>
-</body>
-<table border="1">
-    <tr>
-        <th>Pengusul</th>
-        <th>Waktu Pelaksanaan</th>
-        <th>Lama Pelaksanaan (Hari)</th>
-        <th>Perihal</th>
-        <th>Berkas Pendukung</th>
-    </tr>
-    <tr>
-        <td>Yosia Sitompul</td>
-        <td>2026-02-01</td>
-        <td>3</td>
-        <td>penelitian</td>
-        <td>file</td>
-    </tr>
-    <tr>
-        <td>Fathin Ahmad Zidan</td>
-        <td>2026-02-07</td>
-        <td>5</td>
-        <td>Workshop Teknologi</td>
-        <td>file</td>
-    </tr>
-</table> 
+    <h1>Contoh Card, Tabel, dan Form</h1>
+
+    <!-- Card -->
+    <div class="card">
+        <img src="gambar.jpg" alt="Contoh Card">
+        <h2>Judul Card</h2>
+        <p>Ini adalah deskripsi singkat card.</p>
+    </div>
+
+    <!-- Tabel -->
+    <h2>Contoh Tabel</h2>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+        </tr>
+        <tr>
+            <td>Fathin</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Ani</td>
+            <td>22</td>
+        </tr>
+    </table>
+
+    <!-- Form -->
+    <h2>Contoh Form</h2>
+    <form>
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"><br><br>
+
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan"></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
 </body>
 </html>
