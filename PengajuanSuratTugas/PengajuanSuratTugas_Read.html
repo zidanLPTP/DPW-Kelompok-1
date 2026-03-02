@@ -3,109 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Pembuatan Card, Tabel, dan Form</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-         header {
-            background-color: #a30707;
-            padding: 40px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            border-bottom: #333 solid 2px;
-        }
-        .back-button-container {
-            margin-bottom: 20px;
-        }
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #a30707;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            border: 2px solid #a30707;
-        }
-        .back-button:hover {
-            background-color: white;
-            color: #a30707;
-            box-shadow: 0 2px 8px rgba(163, 7, 7, 0.3);
-        }
-        .TambahData-container {
-            margin-top: 20px;
-        }
-        .TambahData {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #a30707;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            border: 2px solid #a30707;
-        }
-        .TambahData:hover {
-            background-color: white;
-            color: #a30707;
-            box-shadow: 0 2px 8px rgba(163, 7, 7, 0.3);
-        }
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 2px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        form {
-            margin-top: 20px;
-        }
-         section {
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="PengajuanSuratTugas_Read.css">
 </head>
 <body>
-    <header>
-        <h1>Website Kepegawaian Teknik</h1>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Sistem Kepegawaian - Teknik</h1>
     </header>
-    <div class="back-button-container">
-        <a href="../Dashboard.html" class="back-button">Kembali ke Dashboard</a>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="../Dashboard.html">Dashboard</a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        Pengajuan Surat Tugas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+     <!-- Main Content -->
+        <main class="main-content">
+            <div class="table-section">
+                <h3>Pengajuan Surat Tugas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pengusul</th>
+                            <th>Waktu Pelaksanaan</th>
+                            <th>Lama (Hari)</th>
+                            <th>Perihal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yosia Sitompul</td>
+                            <td>2024-01-15</td>
+                            <td>3</td>
+                            <td>Pengumpulan Data</td>
+                            <td><button>Edit</button><button>Hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td>Fathin Ahmad Zidan</td>
+                            <td>2024-02-20</td>
+                            <td>2</td>
+                            <td>Rapat Koordinasi</td>
+                            <td><button>Edit</button><button>Hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td>Muhammad Rifqi Fathurrahman</td>
+                            <td>2024-03-10</td>
+                            <td>5</td>
+                            <td>Pelatihan Teknis</td>
+                            <td><button>Edit</button><button>Hapus</button></td>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
     </div>
-    <!-- Tabel -->
-    <h2>Pengisian Data</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Nama</th>
-                <th>Usia</th>
-                <th>Jabatan</th>
-            </tr>
-        <tr>
-            <td>Alice</td>
-            <td>30</td>
-            <td>Manager</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>25</td>
-            <td>Staff</td>
-        </tr>
-    <div class="TambahData-container">
-        <a href="../PengajuanSuratTugas/PengajuanSuratTugas_Create.html" class="TambahData">Tambah Data</a>
-    </div>
-    <!-- Form -->
+
 </body>
 </html>
