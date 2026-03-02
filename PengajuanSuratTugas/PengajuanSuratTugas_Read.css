@@ -74,8 +74,16 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* Tambahan: Header tabel agar H3 dan Tombol sejajar */
+.table-header {
+    display: flex;
+    justify-content: space-between; /* Judul di kiri, tombol di kanan */
+    align-items: center;           /* Sejajar secara vertikal */
+    margin-bottom: 20px;           /* Jarak ke tabel */
+}
+
 .table-section h3 {
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Menghilangkan margin bawah karena sudah diatur table-header */
     color: #8B0000;
     font-size: 18px;
 }
@@ -108,31 +116,42 @@ tbody tr:hover {
 
 /* ================= BUTTON ================= */
 button {
-    padding: 6px 12px;
+    padding: 8px 14px; /* Sedikit lebih besar */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 13px;
     transition: all 0.3s ease;
+}
+
+/* Tombol Tambah (Warna Hijau) */
+.btn-tambah {
+    background-color: #059669;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-tambah:hover {
+    background-color: #047857;
+}
+
+/* Tombol Edit di dalam Tabel */
+td button:first-child {
+    background-color: #2563EB;
+    color: white;
     margin-right: 5px;
 }
 
-/* Tombol Edit */
-button:first-child {
-    background-color: #2563EB;
-    color: white;
-}
-
-button:first-child:hover {
+td button:first-child:hover {
     background-color: #1D4ED8;
 }
 
-/* Tombol Hapus */
-button:last-child {
+/* Tombol Hapus di dalam Tabel */
+td button:last-child {
     background-color: #DC2626;
     color: white;
 }
 
-button:last-child:hover {
+td button:last-child:hover {
     background-color: #B91C1C;
 }

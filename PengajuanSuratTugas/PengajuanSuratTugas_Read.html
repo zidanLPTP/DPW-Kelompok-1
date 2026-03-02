@@ -2,34 +2,34 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembuatan Card, Tabel, dan Form</title>
     <link rel="stylesheet" href="PengajuanSuratTugas_Read.css">
+    <script src="PengajuanSuratTugas_Read.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <h1>Sistem Kepegawaian - Teknik</h1>
     </header>
 
     <div class="container">
-
-        <!-- Sidebar -->
         <aside class="sidebar">
             <ul>
                 <li>
                     <a href="../Dashboard.html">Dashboard</a>
                 </li>
                 <li class="active">
-                    <a href="#">
-                        Pengajuan Surat Tugas
-                    </a>
+                    <a href="#">Pengajuan Surat Tugas</a>
                 </li>
             </ul>
         </aside>
-     <!-- Main Content -->
+
         <main class="main-content">
             <div class="table-section">
-                <h3>Pengajuan Surat Tugas</h3>
+                <div class="table-header">
+                    <h3>Pengajuan Surat Tugas</h3>
+                    <button onclick="dnew(); goToCreate();" class="btn-tambah">+ New</button>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -46,28 +46,35 @@
                             <td>2024-01-15</td>
                             <td>3</td>
                             <td>Pengumpulan Data</td>
-                            <td><button>Edit</button><button>Hapus</button></td>
+                            <td>
+                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="hapusBaris(this)">Hapus</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Fathin Ahmad Zidan</td>
                             <td>2024-02-20</td>
                             <td>2</td>
                             <td>Rapat Koordinasi</td>
-                            <td><button>Edit</button><button>Hapus</button></td>
+                            <td>
+                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="hapusBaris(this)">Hapus</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>Muhammad Rifqi Fathurrahman</td>
                             <td>2024-03-10</td>
                             <td>5</td>
                             <td>Pelatihan Teknis</td>
-                            <td><button>Edit</button><button>Hapus</button></td>
+                            <td>
+                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="hapusBaris(this)">Hapus</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-
         </main>
-
     </div>
-
 </body>
 </html>
