@@ -1,88 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Dashboard</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background-color: #a30707;
-            padding: 40px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
-
-        nav {
-            padding: 10px;
-            text-align: right;
-        }
-        nav ul {
-            list-style-type: none;
-            overflow: hidden;
-            margin: 0;
-            padding: 20px;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-            float: right;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            background: #a30707;
-            padding: 8px 12px;
-            border-radius: 6px;
-            display: inline-block;
-        }
-        nav ul li a:hover {
-            color: #a30707;
-            background-color: #ffffff;
-        }
-        
-        section {
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        
-
-        footer {
-            background-color: #a30707;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-    </style>
+    <title>Dashboard Kepegawaian</title>
+    <link rel="stylesheet" href="Dashboard.css">
 </head>
 <body>
-    <header>
-        <h1>Website Kepegawaian Teknik</h1>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Sistem Kepegawaian - Teknik</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="../PengajuanSuratTugas/PengajuanSuratTugas_Read.html">Pengajuan Surat Tugas</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>Selamat Datang di Dashboard Kepegawaian Teknik</h2>
-        <p>Di sini Anda dapat mengelola data kepegawaian, melihat pengajuan surat tugas, dan melakukan berbagai aktivitas terkait kepegawaian.</p>
-    </section>    
-    
-    <footer>
-        <p>&copy; 2026 DPW Kel 1</p>
-    </footer>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li class="active">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="PengajuanSuratTugas/PengajuanSuratTugas_Read.html">
+                        Pengajuan Surat Tugas
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <h2>Dashboard</h2>
+
+            <div class="card-container">
+                <div class="card">
+                    <h3>Total Pengajuan</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Disetujui</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Menunggu</h3>
+                    <p>0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ditolak</h3>
+                    <p>0</p>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <h3>Pengajuan Terbaru</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pengusul</th>
+                            <th>Waktu Pelaksanaan</th>
+                            <th>Lama (Hari)</th>
+                            <th>Perihal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                        </tr>
+                        <tr>
+      
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+
 </body>
 </html>
