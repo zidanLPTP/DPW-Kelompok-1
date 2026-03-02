@@ -136,22 +136,3 @@ button:last-child {
 button:last-child:hover {
     background-color: #B91C1C;
 }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .main-content {
-        padding: 20px;
-    }
-
-    table {
-        font-size: 12px;
-    }
-}
