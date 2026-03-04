@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembuatan Card, Tabel, dan Form</title>
+    <title>Sistem Kepegawaian - Pengajuan Surat Tugas</title>
     <link rel="stylesheet" href="PengajuanSuratTugas_Read.css">
     <script src="PengajuanSuratTugas_Read.js"></script>
 </head>
@@ -15,22 +15,22 @@
     <div class="container">
         <aside class="sidebar">
             <ul>
-                <li>
-                    <a href="../Dashboard.html">Dashboard</a>
-                </li>
-                <li class="active">
-                    <a href="#">Pengajuan Surat Tugas</a>
-                </li>
+                <li><a href="../Dashboard.html">Dashboard</a></li>
+                <li class="active"><a href="#">Pengajuan Surat Tugas</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <div class="table-section">
                 <div class="table-header">
-                    <h3>Pengajuan Surat Tugas</h3>
+                    <div>
+                        <h3>Pengajuan Surat Tugas</h3>
+                        <p class="data-count">Total Data: <span id="jumlahData">3</span></p>
+                    </div>
                     <button onclick="dnew(); goToCreate();" class="btn-tambah">+ New</button>
                 </div>
-                <table>
+                
+                <table id="tabelTugas">
                     <thead>
                         <tr>
                             <th>Pengusul</th>
@@ -51,7 +51,7 @@
                             <td>Pengumpulan Data</td>
                             <td>file</td>
                             <td>
-                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="dEdit('Yosia Sitompul')">Edit</button>
                                 <button onclick="hapusBaris(this)">Hapus</button>
                             </td>
                         </tr>
@@ -63,7 +63,7 @@
                             <td>Rapat Koordinasi</td>
                             <td>link</td>
                             <td>
-                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="dEdit('Fathin Ahmad Zidan')">Edit</button>
                                 <button onclick="hapusBaris(this)">Hapus</button>
                             </td>
                         </tr>
@@ -75,7 +75,7 @@
                             <td>Pelatihan Teknis</td>
                             <td>file</td>
                             <td>
-                                <button onclick="dEdit()">Edit</button>
+                                <button onclick="dEdit('Muhammad Rifqi Fathurrahman')">Edit</button>
                                 <button onclick="hapusBaris(this)">Hapus</button>
                             </td>
                         </tr>

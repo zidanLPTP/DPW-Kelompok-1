@@ -155,3 +155,18 @@ td button:last-child {
 td button:last-child:hover {
     background-color: #B91C1C;
 }
+
+.data-count {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #8B0000; 
+}
+
+#jumlahData {
+    background-color: #8B0000;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 5px;
+}
