@@ -16,12 +16,7 @@ function dnew() {
 function dEdit(nama) {
     const konfirmasi = confirm("Apakah anda yakin ingin mengedit data milik " + nama + "?");
     if (konfirmasi) {
-        let perihalBaru = prompt("Masukkan perihal baru untuk " + nama + ":");
-        if (perihalBaru !== null && perihalBaru !== "") {
-            alert("Perihal untuk " + nama + " berhasil diubah menjadi: " + perihalBaru);
-        } else {
-            alert("Edit dibatalkan atau data tidak valid.");
-        }
+        window.location.href = "PengajuanSuratTugas_Update.html";
     }
 }
 

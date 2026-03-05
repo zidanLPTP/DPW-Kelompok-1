@@ -1,0 +1,109 @@
+/* Reset Dasar agar sama dengan Dashboard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F3F4F6; /* Warna abu muda dashboard */
+    color: #111827;
+    padding: 40px;
+}
+
+/* Container Form agar serasi dengan Card di Dashboard */
+.container {
+    background-color: white;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #8B0000; /* Merah Marun UNRI */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Timer Sesi yang diminta Aslab */
+#session-timer {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 15px;
+}
+
+#timer {
+    background-color: #1F2937;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Styling Label Form */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1F2937;
+    font-size: 14px;
+}
+
+/* Input Fields agar lebih modern */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #8B0000; /* Highlight merah saat diketik */
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+/* Button Kirim (Disamakan dengan tombol Sidebar/Navbar) */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #8B0000; /* Warna Merah Marun */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #a30000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.2);
+}
+
+/* Button Kembali (Jika ada) */
+.btn-back {
+    background-color: #1F2937;
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    background-color: #374151;
+}
