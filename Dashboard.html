@@ -1,60 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Dashboard Kepegawaian</title>
-    <link rel="stylesheet" href="Dashboard.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="Dashboard.css" />
+  </head>
+  <body>
     <!-- Navbar -->
     <header class="navbar">
-        <h1>Sistem Kepegawaian - Teknik</h1>
+      <h1>Sistem Kepegawaian - Teknik</h1>
     </header>
 
     <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li class="active">
+            <a href="#">Dashboard</a>
+          </li>
+          <li>
+            <a href="PengajuanSuratTugas/PengajuanSuratTugas_Read.html">
+              Pengajuan Surat Tugas
+            </a>
+          </li>
+        </ul>
+      </aside>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul>
-                <li class="active">
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="PengajuanSuratTugas/PengajuanSuratTugas_Read.html">
-                        Pengajuan Surat Tugas
-                    </a>
-                </li>
-            </ul>
-        </aside>
+      <!-- Main Content -->
+      <main class="main-content">
+        <h2>Dashboard</h2>
 
-        <!-- Main Content -->
-        <main class="main-content">
+        <div class="card-container">
+          <div class="card">
+            <h3>Menunggu</h3>
+            <p>0</p>
+          </div>
 
-            <h2>Dashboard</h2>
+          <div class="card">
+            <h3>Disetujui</h3>
+            <p>0</p>
+          </div>
 
-            <div class="card-container">
-                <div class="card">
-                    <h3>Menunggu</h3>
-                    <p>0</p>
-                </div>
+          <div class="card">
+            <h3>Ditolak</h3>
+            <p>0</p>
+          </div>
 
-                <div class="card">
-                    <h3>Disetujui</h3>
-                    <p>0</p>
-                </div>
-
-                <div class="card">
-                    <h3>Ditolak</h3>
-                    <p>0</p>
-                </div>
-
-                <div class="card">
-                    <h3>Total Pengajuan</h3>
-                    <p>0</p>
-                </div>
-            </div>
-        </main>
+          <div class="card">
+            <h3>Total Pengajuan</h3>
+            <p>0</p>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>

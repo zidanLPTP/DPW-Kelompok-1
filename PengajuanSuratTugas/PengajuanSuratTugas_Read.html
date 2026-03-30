@@ -1,88 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Kepegawaian - Pengajuan Surat Tugas</title>
-    <link rel="stylesheet" href="PengajuanSuratTugas_Read.css">
-    <script src="PengajuanSuratTugas_Read.js"></script>
-</head>
-<body>
-    <header class="navbar">
-        <h1>Sistem Kepegawaian - Teknik</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="PengajuanSuratTugas_Read.js"></script>
+        <title>Pengajuan Surat Tugas</title>
+    </head>
+    <body>
+        <header></header>
 
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <li><a href="../Dashboard.html">Dashboard</a></li>
-                <li class="active"><a href="#">Pengajuan Surat Tugas</a></li>
-            </ul>
-        </aside>
-
-        <main class="main-content">
-            <div class="table-section">
-                <div class="table-header">
-                    <div>
-                        <h3>Pengajuan Surat Tugas</h3>
-                        <p class="data-count">Total Data: <span id="jumlahData">3</span></p>
-                    </div>
-                    <button onclick="dnew(); goToCreate();" class="btn-tambah">+ New</button>
+        <main>
+            <!-- sidebar -->
+            <aside
+                class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-100 flex flex-col z-50 shadow-sm">
+                <div
+                    class="flex items-center justify-center py-10 border-b border-gray-50">
+                    <img
+                        src="/image/LOGO-UNRI.png"
+                        alt="Logo Fakultas Teknik Universitas Riau"
+                        class="w-32 h-auto object-contain" />
                 </div>
-                
-                <table id="tabelTugas">
-                    <thead>
-                        <tr>
-                            <th>Pengusul</th>
-                            <th>NIP</th>
-                            <th>Waktu Pelaksanaan</th>
-                            <th>Lama (Hari)</th>
-                            <th>Perihal</th>
-                            <th>Berkas Pendukung</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Yosia Sitompul</td>
-                            <td>12345678</td>
-                            <td>2024-01-15</td>
-                            <td>3</td>
-                            <td>Pengumpulan Data</td>
-                            <td>file</td>
-                            <td>
-                                <button onclick="dEdit('Yosia Sitompul')">Edit</button>
-                                <button onclick="hapusBaris(this)">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Fathin Ahmad Zidan</td>
-                            <td>87654321</td>
-                            <td>2024-02-20</td>
-                            <td>2</td>
-                            <td>Rapat Koordinasi</td>
-                            <td>link</td>
-                            <td>
-                                <button onclick="dEdit('Fathin Ahmad Zidan')">Edit</button>
-                                <button onclick="hapusBaris(this)">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Muhammad Rifqi Fathurrahman</td>
-                            <td>11223344</td>
-                            <td>2024-03-10</td>
-                            <td>5</td>
-                            <td>Pelatihan Teknis</td>
-                            <td>file</td>
-                            <td>
-                                <button onclick="dEdit('Muhammad Rifqi Fathurrahman')">Edit</button>
-                                <button onclick="hapusBaris(this)">Hapus</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
+                <nav class="flex-1 px-4 py-16 space-y-1">
+                    <a
+                        href="../index.html"
+                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+                        <i
+                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
+                        Dashboard
+                    </a>
+
+                    <a
+                        href="#"
+                        class="group flex items-center px-4 py-3 text-sm font-semibold text-red-700 bg-red-50 rounded-xl transition-all duration-300">
+                        <i class="bx bx-grid-alt mr-4 text-xl text-red-600"></i>
+                        Pengajuan Surat Tugas
+                    </a>
+
+                    <a
+                        href="#"
+                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+                        <i
+                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
+                        Punya Maul
+                    </a>
+                    <a
+                        href="#"
+                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+                        <i
+                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
+                        Punya habil
+                    </a>
+                </nav>
+            </aside>
+            <!-- end sidebar -->
+
+            <main class="ml-72 min-h-screen bg-gray-50/50 p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2
+                            class="text-2xl font-bold text-gray-800 tracking-tight">
+                            Daftar Pengajuan Surat Tugas
+                        </h2>
+                    </div>
+                    <button
+                        onclick="
+              dnew();
+              goToCreate();
+            "
+                        class="group flex items-center gap-3 bg-white border border-gray-200 text-gray-600 px-6 py-3 rounded-xl font-semibold shadow-sm hover:bg-red-50/50 hover:text-red-600 hover:border-red-200 transition-all duration-300 active:scale-95">
+                        <i
+                            class="bx bx-plus-circle text-xl text-gray-400 group-hover:text-red-600 transition-colors"></i>
+                        <span>Tambah Pengajuan</span>
+                    </button>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table id="tabelTugas"
+                            class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-gray-50/50 border-b border-gray-100">
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                        Pengusul
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                        NIP
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                        Waktu
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest text-center">
+                                        Durasi
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                        Perihal
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                        Berkas
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-widest text-right">
+                                        Aksi
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-50">
+                                <tr
+                                    class="hover:bg-red-50/30 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div
+                                            class="font-semibold text-gray-800">
+                                            Yosia Sitompul
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600">12345678</td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600">15
+                                        Jan 2024</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="bg-gray-100 text-gray-600 text-xs font-bold px-2.5 py-1 rounded-full group-hover:bg-white transition-colors">3
+                                            Hari</span>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600 max-w-xs truncate">
+                                        Pengumpulan Data Lapangan
+                                    </td>
+                                    <td class="px-6 py-4 text-red-600">
+                                        <a
+                                            href="#"
+                                            class="hover:underline flex items-center gap-1 text-xs font-bold">
+                                            <i class="bx bx-file-blank"></i>
+                                            Lihat File
+                                        </a>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            onclick="dEdit('Yosia Sitompul')"
+                                            class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-all"
+                                            title="Edit Data">
+                                            <i
+                                                class="bx bx-edit-alt text-lg"></i>
+                                        </button>
+                                        <button
+                                            onclick="hapusBaris(this)"
+                                            class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition-all"
+                                            title="Hapus Data">
+                                            <i class="bx bx-trash text-lg"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    class="hover:bg-red-50/30 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div
+                                            class="font-semibold text-gray-800">
+                                            Fathin Ahmad Zidan
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600">87654321</td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600">20
+                                        Feb 2024</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="bg-gray-100 text-gray-600 text-xs font-bold px-2.5 py-1 rounded-full group-hover:bg-white transition-colors">2
+                                            Hari</span>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm text-gray-600 max-w-xs truncate">
+                                        Rapat Koordinasi Fakultas
+                                    </td>
+                                    <td class="px-6 py-4 text-red-600">
+                                        <a
+                                            href="#"
+                                            class="hover:underline flex items-center gap-1 text-xs font-bold">
+                                            <i class="bx bx-link-external"></i>
+                                            Lihat Link
+                                        </a>
+                                    </td>
+                                    <td class="px-6 py-4 text-right space-x-2">
+                                        <button
+                                            onclick="dEdit('Fathin Ahmad Zidan')"
+                                            class="text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-all"
+                                            title="Edit">
+                                            <i
+                                                class="bx bx-edit-alt text-lg"></i>
+                                        </button>
+                                        <button
+                                            onclick="hapusBaris(this)"
+                                            class="text-red-600 hover:bg-red-50 p-2 rounded-lg transition-all"
+                                            title="Hapus">
+                                            <i class="bx bx-trash text-lg"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
         </main>
-    </div>
-</body>
+        <footer></footer>
+    </body>
 </html>
