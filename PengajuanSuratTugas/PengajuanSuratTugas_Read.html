@@ -7,53 +7,62 @@
         <script src="PengajuanSuratTugas_Read.js"></script>
         <title>Pengajuan Surat Tugas</title>
     </head>
-    <body>
-        <header></header>
+  <body class="pt-16 bg-gray-100"> 
+    <header
+      class="fixed top-0 left-0 right-0 h-16 bg-[#B71C1C] text-white flex items-center justify-between px-6 z-[60] shadow-sm">
+      <div class="flex items-center space-x-3">
+        <img src="../image/logo-teknik.png" alt="Logo" class="h-10 w-auto" />
+        <div class="leading-tight">
+          <h1 class="text-xs font-bold"></h1>
+        </div>
+      </div>
+
+      <a href="#" class="flex items-center space-x-3 border-l border-white/20 pl-4 hover:opacity-80 transition-all cursor-pointer group">
+        <div class="text-right hidden sm:block">
+          <p class="text-[11px] font-bold uppercase tracking-wide text-white">Fathin Ahmad Zidan</p>
+          <p class="text-[10px] text-gray-300 font-medium">Admin</p>
+        </div>
+        
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shadow-inner overflow-hidden group-hover:bg-white/40 transition-colors">
+            <i class='bx bxs-user text-2xl text-white/80'></i>
+          </div>
+          <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full ring-2 ring-[#B71C1C] bg-green-500"></span>
+        </div>
+      </a>
+    </header>
 
         <main>
             <!-- sidebar -->
-            <aside
-                class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-100 flex flex-col z-50 shadow-sm">
-                <div
-                    class="flex items-center justify-center py-10 border-b border-gray-50">
-                    <img
-                        src="/image/LOGO-UNRI.png"
-                        alt="Logo Fakultas Teknik Universitas Riau"
-                        class="w-32 h-auto object-contain" />
-                </div>
+            <aside class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-100 flex flex-col z-50 mt-16">
+  <nav class="flex-1 px-4 py-6 space-y-1">
+    
+    <a href="../index.html" 
+       class="group flex items-center px-4 py-3 text-sm font-semibold text-red-600 bg-red-50 rounded-xl transition-all duration-300">
+      <i class="bx bx-grid-alt mr-4 text-xl"></i>
+      Dashboard
+    </a>
 
-                <nav class="flex-1 px-4 py-16 space-y-1">
-                    <a
-                        href="../index.html"
-                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
-                        <i
-                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
-                        Dashboard
-                    </a>
+    <a href="#" 
+       class="group flex items-center px-4 py-3 text-sm font-medium text-gray-500 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+      <i class="bx bx-user mr-4 text-xl group-hover:text-red-600"></i>
+      Pengajuan Surat Tugas
+    </a>
 
-                    <a
-                        href="#"
-                        class="group flex items-center px-4 py-3 text-sm font-semibold text-red-700 bg-red-50 rounded-xl transition-all duration-300">
-                        <i class="bx bx-grid-alt mr-4 text-xl text-red-600"></i>
-                        Pengajuan Surat Tugas
-                    </a>
+    <a href="#" 
+       class="group flex items-center px-4 py-3 text-sm font-medium text-gray-500 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+      <i class="bx bx-list-minus mr-4 text-xl group-hover:text-red-600"></i>
+      Punya Maul
+    </a>
 
-                    <a
-                        href="#"
-                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
-                        <i
-                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
-                        Punya Maul
-                    </a>
-                    <a
-                        href="#"
-                        class="group flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
-                        <i
-                            class="bx bx-list-check mr-4 text-xl group-hover:text-red-600 transition-colors"></i>
-                        Punya habil
-                    </a>
-                </nav>
-            </aside>
+    <a href="#" 
+       class="group flex items-center px-4 py-3 text-sm font-medium text-gray-500 hover:text-red-600 hover:bg-red-50/50 rounded-xl transition-all duration-300">
+      <i class="bx bx-list-minus mr-4 text-xl group-hover:text-red-600"></i>
+      Punya habil
+    </a>
+
+  </nav>
+</aside>
             <!-- end sidebar -->
 
             <main class="ml-72 min-h-screen bg-gray-50/50 p-8">

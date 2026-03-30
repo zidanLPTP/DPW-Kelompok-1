@@ -1,25 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Dashboard</title>
   </head>
-  <body>
-    <header></header>
+  <body class="pt-16 bg-gray-100"> 
+    <header
+      class="fixed top-0 left-0 right-0 h-16 bg-[#B71C1C] text-white flex items-center justify-between px-6 z-[60] shadow-sm">
+      <div class="flex items-center space-x-3">
+        <img src="image/logo-teknik.png" alt="Logo" class="h-10 w-auto" />
+        <div class="leading-tight">
+          <h1 class="text-xs font-bold"></h1>
+        </div>
+      </div>
+
+      <a href="#" class="flex items-center space-x-3 border-l border-white/20 pl-4 hover:opacity-80 transition-all cursor-pointer group">
+        <div class="text-right hidden sm:block">
+          <p class="text-[11px] font-bold uppercase tracking-wide text-white">Fathin Ahmad Zidan</p>
+          <p class="text-[10px] text-gray-300 font-medium">Admin</p>
+        </div>
+        
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shadow-inner overflow-hidden group-hover:bg-white/40 transition-colors">
+            <i class='bx bxs-user text-2xl text-white/80'></i>
+          </div>
+          <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full ring-2 ring-[#B71C1C] bg-green-500"></span>
+        </div>
+      </a>
+    </header>
 
     <main>
       <aside
-        class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-100 flex flex-col z-50 shadow-sm">
-        <!-- logo teknikk -->
-        <div
-          class="flex items-center justify-center py-10 border-b border-gray-50">
-          <img
-            src="image/LOGO-UNRI.png"
-            alt="Logo Fakultas Teknik Universitas Riau"
-            class="w-32 h-auto object-contain" />
-        </div>
+        class="fixed inset-y-0 left-0 w-72 bg-white border-r border-gray-200 flex flex-col z-50 shadow-sm mt-16">
 
         <nav class="flex-1 px-4 py-16 space-y-1">
           <a
@@ -53,6 +68,14 @@
           </a>
         </nav>
       </aside>
+
+      <div class="ml-72 p-8 min-h-screen">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+              <h2 class="text-xl font-bold text-gray-800">Dashboard</h2>
+              <p class="text-gray-600 mt-2"></p>
+          </div>
+      </div>
+
     </main>
     <footer></footer>
   </body>
