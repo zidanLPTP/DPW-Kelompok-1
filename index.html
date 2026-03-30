@@ -7,11 +7,29 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <header class="bg-red-700">
-      <img src="image/logo-teknik.png" alt="logo fakultas teknik unri" />
-      <h1 class="text-center text-xl font-medium">Dashboard</h1>
-    </header>
-    <main></main>
+
+    <main class="flex min-h-screen">
+      <aside class="w-64 bg-red-700 text-white flex flex-col p-4">
+        
+        <div class="flex items-center gap-2 m-8 mb-32">
+          <img src="image/logo-teknik.png" class="h-8" />
+        </div>
+
+        <nav class="flex flex-col gap-3">
+          <a href="#" class="hover:bg-white hover:text-red-700 p-3 ">Dashboard</a>
+          <a href="#" class="hover:bg-white hover:text-red-700 p-3">Pengajuan Surat Tugas</a>
+          <a href="#" class="hover:bg-white hover:text-red-700 p-3">Punya Maul</a>
+          <a href="#" class="hover:bg-white hover:text-red-700 p-3">Punya Habil</a>
+        </nav>
+
+      </aside>
+
+      <!-- Konten utama -->
+      <section class="flex-1 p-6 bg-gray-100">
+        <h1 class="text-2xl font-medium">Dashboard</h1>
+      </section>
+
+    </main>
     <footer></footer>
   </body>
 </html>
